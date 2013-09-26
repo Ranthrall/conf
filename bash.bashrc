@@ -52,6 +52,7 @@ if [ `id -u` -ne 0 ]; then
     alias update='yaourt_wrapper -Syu'
     alias systemctl='sudo systemctl'
     alias netctl='sudo netctl'
+#    alias pacman='sudo pacman'
 fi
 
 ## ls ## {{{
