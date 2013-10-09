@@ -4,17 +4,18 @@
 
 # Ativar completações do bash
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
 # Ativar o gancho "command-not-found" do pkgfile
-source /usr/share/doc/pkgfile/command-not-found.bash
+ source /usr/share/doc/pkgfile/command-not-found.bash
+
+#cowsay
+#command fortune /usr/share/fortune/brasil | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 
 # Transparência do terminal
 #transset-df -a 0.7 >/dev/null
 
 # XDG
 export XDG_CONFIG_HOME="$HOME"/.config
-
-# Fortunes
-#echo&&fortune /usr/share/fortune/brasil&&echo
 
 # Aliases
 ## by LaraCraft304 ##
@@ -44,15 +45,8 @@ alias ..='cd ..'
 # Privileged access
 if [ `id -u` -ne 0 ]; then
     alias sudo='sudo '
-    alias scat='sudo cat'
-    alias svim='sudoedit'
-    alias root='sudo -s'
     alias reboot='sudo systemctl reboot'
     alias poweroff='sudo systemctl poweroff'
-    alias update='yaourt_wrapper -Syu'
-    alias systemctl='sudo systemctl'
-    alias netctl='sudo netctl'
-#    alias pacman='sudo pacman'
 fi
 
 ## ls ## {{{
@@ -76,14 +70,7 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
-alias cls=' echo -ne "\033c"'       # clear screen for real (it does not work in Terminology)
-# }}}
-
-## Make Bash error tolerant ## {{{
-alias :q=' exit'
-alias :Q=' exit'
-alias :x=' exit'
-alias cd..='cd ..'
+alias cls=" echo -ne \"\033c\""       # clear screen for real (it does not work in Terminology)
 # }}}
 
 ## Yaourt aliases ## {{{
@@ -97,10 +84,7 @@ alias yauc="yaourt_wrapper -Scc"					# '[c]lean cache'	- delete all not currentl
 alias yaulf="yaourt_wrapper -Ql"					# '[l]ist [f]iles'	- list all files installed by a given package
 alias yauexpl="yaourt_wrapper -D --asexp"			# 'mark as [expl]icit'	- mark one or more packages as explicitly installed 
 alias yauimpl="yaourt_wrapper -D --asdep"			# 'mark as [impl]icit'	- mark one or more packages as non explicitly installed
-
-# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias yauro="pacman -Rcns $(pacman -Qqtd)"
-# }}}
+alias yauro="yaourt_wrapper -Orphans"
 
 extract() {
     local c e i
