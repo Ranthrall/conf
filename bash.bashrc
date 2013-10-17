@@ -2,14 +2,23 @@
 # ~/.bashrc
 #
 
+# Check if interactive
+[ -z "$PS1" ] && return
+
+# Se conexão via SSH, executar o screen
+[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen
+
 # Ativar completações do bash
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+source /usr/share/bash-completion/bash_completion
 
 # Ativar o gancho "command-not-found" do pkgfile
- source /usr/share/doc/pkgfile/command-not-found.bash
+source /usr/share/doc/pkgfile/command-not-found.bash
 
 #cowsay
-#command fortune /usr/share/fortune/brasil | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
+#command fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
+
+#alsi
+alsi -ub -f
 
 # Transparência do terminal
 #transset-df -a 0.7 >/dev/null
@@ -195,4 +204,19 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PS1="\n\[\033[1;37m\]\342\224\214($(if [ `id -u` -eq 0 ]; then echo '\[\033[01;31m\]ROOT'; else echo '\[\033[01;34m\]\u'; fi)\[\033[1;37m\])\342\224\200(\$(if [ \$? -eq 0 ]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi)\[\033[1;37m\])\342\224\200(\[\033[1;34m\]\D{%a, %d/%b} - \A\[\033[1;37m\])\[\033[1;37m\]\n\342\224\224\342\224\200(\[\033[1;32m\]\w\[\033[1;37m\])\342\224\200(\[\033[1;32m\]\$(ls -1 | wc -l | tr -d ' ') arquivos, \$(ls -lah | grep -m 1 total | awk '{print $2}')b\[\033[1;37m\])\342\224\200> \[\033[0m\]"
+PS1="\n\[\
+$BWhite\]┌($(if [ `id -u` -eq 0 ]; then echo '\[\
+$BRed\]ROOT'; else echo "\[\
+$BBlue\]\u"; fi)\[\
+$BWhite\])─(\$(if [ \$? -eq 0 ]; then echo '\[\
+$BGreen\]:D'; else echo '\[\
+$BRedda\]:('; fi)\[\
+$BWhite\])─(\[\
+$BBlue\]\D{%a, %d/%b} - \A\[\
+$BWhite\])\[\
+$BWhite\]\n└(\[\
+$BGreen\]\w\[\
+$BWhite\])─(\[\
+$BGreen\]\$(ls -1 | wc -l | tr -d ' ') arquivos, \$(ls -lah | grep -m 1 total | awk '{print $2}')b\[\
+$BWhite\])─> \[\
+$Color_Off\]"
