@@ -1,0 +1,23 @@
+style "blue-window"
+{
+    bg[NORMAL] = "#0015FF"
+    XfceNotifyWindow::border-color = "#000095"
+    XfceNotifyWindow::border-radius = 10.0
+    XfceNotifyWindow::border-width = 6.0
+}
+class "XfceNotifyWindow" style "blue-window"
+
+style "blue-text"
+{
+    font_name = "Droid Sans 18"
+    fg[NORMAL] = "#ffffff"
+    GtkWidget::link-color = "#ffffff"
+}
+widget_class "XfceNotifyWindow.*.<GtkLabel>" style "blue-text"
+
+style "blue-btn"
+{
+    bg[NORMAL] = "#000095"
+    bg[PRELIGHT] = "#454595"
+}
+widget "XfceNotifyWindow.*.GtkButton" style "blue-btn"

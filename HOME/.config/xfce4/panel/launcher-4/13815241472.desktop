@@ -1,0 +1,31 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Chrome
+GenericName=Web Browser
+GenericName[pt]=Navegador Web
+GenericName[pt_BR]=Navegador da Internet
+Comment=Access the Internet
+Comment[pt]=Aceder à Internet
+Comment[pt_BR]=Acessar a internet
+Exec=/opt/google/chrome/google-chrome %U
+Terminal=false
+Icon=google-chrome
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+X-Ayatana-Desktop-Shortcuts=NewWindow;NewIncognito
+X-XFCE-Source=file:///usr/share/applications/google-chrome.desktop
+
+[NewWindow Shortcut Group]
+Name=New Window
+Name[pt]=Nova janela
+Name[pt_BR]=Nova janela
+Exec=/opt/google/chrome/google-chrome
+TargetEnvironment=Unity
+
+[NewIncognito Shortcut Group]
+Name=New Incognito Window
+Name[pt]=Nova janela de navegação anónima
+Name[pt_BR]=Nova janela anônima
+Exec=/opt/google/chrome/google-chrome --incognito
+TargetEnvironment=Unity

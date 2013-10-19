@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+Name=Xfce Terminal
+Name[pt]=Terminal Xfce
+Name[pt_BR]=Xfce terminal
+Comment=Terminal Emulator
+Comment[pt]=Emulador de terminal
+Comment[pt_BR]=Emulador de terminal
+GenericName=Terminal Emulator
+GenericName[pt]=Emulador de terminal
+GenericName[pt_BR]=Emulador de terminal
+Exec=xfce4-terminal
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=GTK;System;TerminalEmulator;
+StartupNotify=true
+X-XFCE-Source=file:///usr/share/applications/xfce4-terminal.desktop

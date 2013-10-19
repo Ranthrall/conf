@@ -1,0 +1,14 @@
+button-title=Menu de aplicativos
+button-icon=/usr/share/icons/ACYL_Icon_Theme_0.9.4/scalable/alternative_icons/logos/arch
+show-button-title=false
+show-button-icon=true
+launcher-show-name=false
+launcher-show-description=false
+hover-switch-category=true
+category-icon-size=1
+item-icon-size=0
+favorites=htop.desktop,Thunar.desktop,geany.desktop,filezilla.desktop,netflix-desktop.desktop,google-chrome.desktop,firefox.desktop,gimp.desktop,transmission-gtk.desktop,vlc.desktop
+recent=mineshafter.desktop,filezilla.desktop,guake-prefs.desktop,xterm.desktop,minecraft.desktop,xfce4-notifyd-config.desktop,pidgin.desktop,htop.desktop,uxterm.desktop,audacious.desktop
+menu-width=445
+menu-height=564
+
