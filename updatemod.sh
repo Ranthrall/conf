@@ -88,7 +88,7 @@ ${HOME}/.asoundrc.asoundconf
 
 echo -n "Verificando arquivos... "; checkfiles; echo -e "Concluído.\n"
 
-echo -n "Construindo o commit..."; git commit -am "$1"; echo -e "Concluído.\n"
+echo -n "Construindo o commit..."; git add *; git commit -am "$1"; echo -e "Concluído.\n"
 
 echo -n "Enviando commit"; git push; echo -e "Concluído.\n"
 
