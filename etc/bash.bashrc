@@ -20,8 +20,8 @@ source /usr/share/doc/pkgfile/command-not-found.bash
 #alsi
 alsi -ub -f
 
-# Transparência do terminal
-#transset-df -a 0.7 >/dev/null
+# Definir VIM como editor padrão
+export EDITOR=/usr/bin/vim
 
 # XDG
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -204,19 +204,18 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PS1="\n\[\
-$BWhite\]┌($(if [ `id -u` -eq 0 ]; then echo '\[\
-$BRed\]ROOT'; else echo "\[\
-$BBlue\]\u"; fi)\[\
-$BWhite\])─(\$(if [ \$? -eq 0 ]; then echo '\[\
-$BGreen\]:D'; else echo '\[\
-$BRedda\]:('; fi)\[\
-$BWhite\])─(\[\
-$BBlue\]\D{%a, %d/%b} - \A\[\
-$BWhite\])\[\
-$BWhite\]\n└(\[\
-$BGreen\]\w\[\
-$BWhite\])─(\[\
-$BGreen\]\$(ls -1 | wc -l | tr -d ' ') arquivos, \$(ls -lah | grep -m 1 total | awk '{print $2}')b\[\
-$BWhite\])─> \[\
-$Color_Off\]"
+PS1="\n\
+$BWhite┌($(if [ `id -u` -eq 0 ]; then echo "\
+$BRed ROOT "; else echo "\
+$BBlue\u"; fi)\
+$BWhite)─(\$(if [ \$? -eq 0 ]; then echo '\
+$BGreen:D'; else echo '\
+$BRed:('; fi)\
+$BWhite)─(\
+$BBlue\D{%a, %d/%b} - \A\
+$BWhite)\n└(\
+$BGreen\w\
+$BWhite)─(\
+$BGreen\$(ls -1 | wc -l | tr -d ' ') arquivos, \$(ls -lah | grep -m 1 total | awk '{print $2}')b\
+$BWhite)─> \
+$Color_Off"
