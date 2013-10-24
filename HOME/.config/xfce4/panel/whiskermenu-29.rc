@@ -7,8 +7,8 @@ launcher-show-description=false
 hover-switch-category=true
 category-icon-size=1
 item-icon-size=0
-favorites=htop.desktop,Thunar.desktop,geany.desktop,filezilla.desktop,netflix-desktop.desktop,google-chrome.desktop,firefox.desktop,gimp.desktop,transmission-gtk.desktop,vlc.desktop
-recent=filezilla.desktop,geany.desktop,gimp.desktop,mineshafter.desktop,guake-prefs.desktop,xterm.desktop,minecraft.desktop,xfce4-notifyd-config.desktop,pidgin.desktop
-menu-width=445
-menu-height=564
+favorites=htop.desktop,Thunar.desktop,geany.desktop,filezilla.desktop,google-chrome.desktop,firefox.desktop,gimp.desktop,transmission-gtk.desktop,vlc.desktop
+recent=xfce4-settings-editor.desktop,transmission-gtk.desktop,xfce-display-settings.desktop,xfce-backdrop-settings.desktop,gimp.desktop,xfce-ui-settings.desktop,filezilla.desktop,geany.desktop,mineshafter.desktop,guake-prefs.desktop
+menu-width=505
+menu-height=480
 
