@@ -75,6 +75,8 @@ ${HOME}/.asoundrc.asoundconf
 /etc/lightdm/lightdm.conf
 /etc/lightdm/lightdm-gtk-greeter.conf
 /etc/X11/xorg.conf
+/etc/systemd/logind.conf
+/etc/systemd/journald.conf
 
 # udev
 /etc/udev/rules.d/80-net-name-slot.rules

@@ -4,9 +4,9 @@
 #
 # Manual changes to the ALSA library configuration should be implemented
 # by editing the ~/.asoundrc file, not by editing this file.
-!defaults.pcm.card HDMI
-defaults.ctl.card HDMI
-defaults.pcm.device 3
+!defaults.pcm.card NVidia
+defaults.ctl.card NVidia
+defaults.pcm.device 7
 defaults.pcm.subdevice -1
 defaults.pcm.nonblock 1
 defaults.pcm.compat 0
@@ -46,14 +46,14 @@ defaults.pcm.modem.device defaults.pcm.device
 defaults.pcm.file_format "raw"
 defaults.pcm.file_truncate true
 defaults.rawmidi.card 0
-defaults.rawmidi.device 0
+defaults.rawmidi.device 7
 defaults.rawmidi.subdevice -1
 defaults.hwdep.card 0
-defaults.hwdep.device 0
+defaults.hwdep.device 7
 defaults.timer.class 2
 defaults.timer.sclass 0
 defaults.timer.card 0
-defaults.timer.device 0
+defaults.timer.device 7
 defaults.timer.subdevice 0
 defaults.namehint.showall off
 defaults.namehint.basic on
