@@ -5,6 +5,9 @@
 # Check if interactive
 [ -z "$PS1" ] && return
 
+# Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
+test `whoami` == laracraft304 && return
+
 # Se conexão via SSH, executar o screen
 [ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen
 
@@ -49,6 +52,7 @@ alias hist='history | grep'         # requires an argument
 alias openports='ss --all --numeric --processes --ipv4 --ipv6'
 alias pgg='ps -Af | grep'           # requires an argument
 alias ..='cd ..'
+alias reload='source /etc/bash.bashrc'
 # }}}
 
 # Privileged access
@@ -205,17 +209,13 @@ On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
 PS1="\n\
-$BWhite┌($(if [ `id -u` -eq 0 ]; then echo "\
+$BWhite($(if [ `id -u` -eq 0 ]; then echo "\
 $BRed ROOT "; else echo "\
-$BBlue\u"; fi)\
+$BBlue\u@\h"; fi)\
 $BWhite)─(\$(if [ \$? -eq 0 ]; then echo '\
-$BGreen:D'; else echo '\
-$BRed:('; fi)\
+$BGreen\342\234\223'; else echo '\
+$BRed\342\234\227'; fi)\
 $BWhite)─(\
-$BBlue\D{%a, %d/%b} - \A\
-$BWhite)\n└(\
 $BGreen\w\
-$BWhite)─(\
-$BGreen\$(ls -1 | wc -l | tr -d ' ') arquivos, \$(ls -lah | grep -m 1 total | awk '{print $2}')b\
 $BWhite)─> \
 $Color_Off"
