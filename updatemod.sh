@@ -47,8 +47,10 @@ echo -n "Criando lista de arquivos arquivos... "
 declare -x FILES=(
 
 # HOME
-${HOME}/.asoundrc
-${HOME}/.asoundrc.asoundconf
+${HOME}/.tmux.conf
+${HOME}/.Xresources
+${HOME}/.xsessions
+${HOME}/.xinitrc
 
 # lxdm custom theme
 /usr/share/lxdm/themes/BlackICE/background.png
@@ -85,6 +87,7 @@ ${HOME}/.asoundrc.asoundconf
 /boot/syslinux/syslinux.cfg
 
 `find $HOME/.config/xfce4/panel -iname '*' -type f`
+`find /etc/X11/xdm -iname '*' -type f`
 
 ); echo -e "Concluído.\n"
 

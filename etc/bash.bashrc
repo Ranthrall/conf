@@ -5,11 +5,11 @@
 # Check if interactive
 [ -z "$PS1" ] && return
 
-# Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
-test `whoami` == laracraft304 && return
-
 # Se conexão via SSH, executar o screen
 [ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen
+
+# Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
+test `whoami` == laracraft304 && return
 
 # Ativar completações do bash
 source /usr/share/bash-completion/bash_completion
@@ -208,14 +208,4 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PS1="\n\
-$BWhite($(if [ `id -u` -eq 0 ]; then echo "\
-$BRed ROOT "; else echo "\
-$BBlue\u@\h"; fi)\
-$BWhite)─(\$(if [ \$? -eq 0 ]; then echo '\
-$BGreen\342\234\223'; else echo '\
-$BRed\342\234\227'; fi)\
-$BWhite)─(\
-$BGreen\w\
-$BWhite)─> \
-$Color_Off"
+PS1="(\u@\h)─(\w)─>"
