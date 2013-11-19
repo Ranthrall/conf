@@ -1,10 +1,4 @@
 #!/bin/sh
+# Deregister a login. (Derived from TakeConsole as follows:)
 #
-# Xreset
-#
-# This program is run as root after the session ends
-#
-
-/etc/X11/xdm/TakeConsole
-
-exit 0
+/usr/bin/sessreg -d -w /var/log/wtmp -u /var/run/utmp 	-x /etc/X11/xdm/Xservers -l $DISPLAY -h "" $USER

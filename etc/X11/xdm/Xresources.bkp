@@ -14,7 +14,7 @@ xlogin.Login.promptColor:	white
 xlogin.Login.failColor:		red
 xlogin.Login.width:			600
 !xlogin.Login.height:		170
-xlogin.Login.y:				700
+xlogin.Login.y:				600
 xlogin.Login.borderWidth:	0
 xlogin.Login.foreground:	#14c5ff
 xlogin.Login.background:	black
@@ -37,6 +37,11 @@ xlogin.Login.background:	black
 .Xmessage.form.Command.foreground:		#14c5ff
 .Xmessage.form.Command.background:		black
 .Xmessage.form.Command.shapeStyle:		Rectangle
+
+XConsole.text.geometry:	480x130
+XConsole.verbose:	true
+XConsole*iconic:	true
+XConsole*font:		fixed
 
 xlogin*login.translations: #override \
 	Ctrl<Key>R: abort-display()\n\

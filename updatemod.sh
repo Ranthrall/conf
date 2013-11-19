@@ -79,6 +79,7 @@ ${HOME}/.xinitrc
 /etc/X11/xorg.conf
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
+/etc/asound.conf
 
 # udev
 /etc/udev/rules.d/80-net-name-slot.rules

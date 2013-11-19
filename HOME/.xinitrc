@@ -14,3 +14,4 @@ fi
 xhost local:root
 
 exec startxfce4
+#exec cinnamon-session
