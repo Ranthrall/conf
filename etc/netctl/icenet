@@ -1,7 +1,0 @@
-Description='ICENet2 wifi network by BlackICE'
-Interface=wlan0
-Connection=wireless
-Security=wpa
-ESSID=ICENet2
-IP=dhcp
-Key=e231fcbc3f06074cc5588e16d3986835e83a797316d424353d9127ca383d02f8

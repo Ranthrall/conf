@@ -51,19 +51,24 @@ ${HOME}/.tmux.conf
 ${HOME}/.Xresources
 ${HOME}/.xsessions
 ${HOME}/.xinitrc
+${HOME}/.vimrc
+${HOME}/.face
+${HOME}/winemaldito.sh
+${HOME}/X.sh
 
 # lxdm custom theme
-/usr/share/lxdm/themes/BlackICE/background.png
-/usr/share/lxdm/themes/BlackICE/COPYING
-/usr/share/lxdm/themes/BlackICE/greeter.ui
-/usr/share/lxdm/themes/BlackICE/gtkrc
-/usr/share/lxdm/themes/BlackICE/panel.png
-/usr/share/lxdm/themes/BlackICE/README 
+#/usr/share/lxdm/themes/BlackICE/background.png
+#/usr/share/lxdm/themes/BlackICE/COPYING
+#/usr/share/lxdm/themes/BlackICE/greeter.ui
+#/usr/share/lxdm/themes/BlackICE/gtkrc
+#/usr/share/lxdm/themes/BlackICE/panel.png
+#/usr/share/lxdm/themes/BlackICE/README 
 
 # xfce4-notifyd custom theme
-/usr/share/themes/BlackICE/xfce-notify-4.0/gtkrc
+#/usr/share/themes/BlackICE/xfce-notify-4.0/gtkrc
 
 # /etc
+/etc/screenrc
 /etc/bash.bashrc
 /etc/fstab
 /etc/makepkg.conf
@@ -72,23 +77,23 @@ ${HOME}/.xinitrc
 /etc/pacman.d/mirrorlist
 /etc/hostname
 /etc/mkinitcpio.conf
-/etc/netctl/icenet
-/etc/lxdm/lxdm.conf
-/etc/lightdm/lightdm.conf
-/etc/lightdm/lightdm-gtk-greeter.conf
+#/etc/netctl/icenet
+#/etc/lxdm/lxdm.conf
+#/etc/lightdm/lightdm.conf
+#/etc/lightdm/lightdm-gtk-greeter.conf
 /etc/X11/xorg.conf
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
-/etc/asound.conf
+#/etc/asound.conf
 
 # udev
-/etc/udev/rules.d/80-net-name-slot.rules
+#/etc/udev/rules.d/80-net-name-slot.rules
 
 # boot
 /boot/syslinux/syslinux.cfg
 
-`find $HOME/.config/xfce4/panel -iname '*' -type f`
-`find /etc/X11/xdm -iname '*' -type f`
+#`find $HOME/.config/xfce4/panel -iname '*' -type f`
+#`find /etc/X11/xdm -iname '*' -type f`
 
 ); echo -e "Concluído.\n"
 
