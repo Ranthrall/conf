@@ -9,7 +9,7 @@
 #AUTOSAVEBACKUPFILE=0
 #DEVELBUILDDIR="/var/abs/local/yaourtbuild"
 #DEVEL=0
-EDITOR="nano"
+EDITOR="vim"
 #FORCEENGLISH=0
 #FORCE=0
 TMPDIR="/tmp"
@@ -25,7 +25,7 @@ TMPDIR="/tmp"
 
 # AUR
 AURURL="https://aur.archlinux.org"
-AURCOMMENT=5
+AURCOMMENT=0
 #AURDEVELONLY=0
 AURSEARCH=1
 AURUPGRADE=1

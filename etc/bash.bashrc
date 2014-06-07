@@ -6,10 +6,11 @@
 [ -z "$PS1" ] && return
 
 # Se conexão via SSH, executar o screen
-[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen
+[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR ssh
+[ "$TERM" == "screen" ] && alias exit='screen -D'
 
 # Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
-test `whoami` == laracraft304 && return
+#test `whoami` == laracraft304 && return
 
 # Ativar completações do bash
 source /usr/share/bash-completion/bash_completion
@@ -21,7 +22,7 @@ source /usr/share/doc/pkgfile/command-not-found.bash
 #command fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 
 #alsi
-alsi -ub -f
+#alsi -ub -f
 
 # Definir VIM como editor padrão
 export EDITOR=/usr/bin/vim
@@ -31,7 +32,6 @@ export XDG_CONFIG_HOME="$HOME"/.config
 
 # Aliases
 ## by LaraCraft304 ##
-alias yaourt='yaourt_wrapper'
 alias geany='geany_checkpath'
 ## Modified commands ## {{{
 alias diff='colordiff'              # requires colordiff package
@@ -87,17 +87,17 @@ alias cls=" echo -ne \"\033c\""       # clear screen for real (it does not work 
 # }}}
 
 ## Yaourt aliases ## {{{
-alias yau="yaourt_wrapper -S"						# default action	- install one or more packages
-alias yauu="yaourt_wrapper -Syu"					# '[u]pdate'		- upgrade all packages to their newest version
-alias yaur="yaourt_wrapper -Rcns"					# '[r]emove'		- uninstall one or more packages
-alias yaus="yaourt_wrapper -Ss"						# '[s]earch'		- search for a package using one or more keywords
-alias yaui="yaourt_wrapper -Si"						# '[i]nfo'		- show information about a package
-alias yaulo="yaourt_wrapper -Qqdt"					# '[l]ist [o]rphans'	- list all packages which are orphaned
-alias yauc="yaourt_wrapper -Scc"					# '[c]lean cache'	- delete all not currently installed package files
-alias yaulf="yaourt_wrapper -Ql"					# '[l]ist [f]iles'	- list all files installed by a given package
-alias yauexpl="yaourt_wrapper -D --asexp"			# 'mark as [expl]icit'	- mark one or more packages as explicitly installed 
-alias yauimpl="yaourt_wrapper -D --asdep"			# 'mark as [impl]icit'	- mark one or more packages as non explicitly installed
-alias yauro="yaourt_wrapper -Orphans"
+alias yau="yaourt -S"						# default action	- install one or more packages
+alias yauu="yaourt -Syu"					# '[u]pdate'		- upgrade all packages to their newest version
+alias yaur="yaourt -Rcns"					# '[r]emove'		- uninstall one or more packages
+alias yaus="yaourt -Ss"						# '[s]earch'		- search for a package using one or more keywords
+alias yaui="yaourt -Si"						# '[i]nfo'		- show information about a package
+alias yaulo="yaourt -Qqdt"					# '[l]ist [o]rphans'	- list all packages which are orphaned
+alias yauc="yaourt -Scc"					# '[c]lean cache'	- delete all not currently installed package files
+alias yaulf="yaourt -Ql"					# '[l]ist [f]iles'	- list all files installed by a given package
+alias yauexpl="yaourt -D --asexp"			# 'mark as [expl]icit'	- mark one or more packages as explicitly installed 
+alias yauimpl="yaourt -D --asdep"			# 'mark as [impl]icit'	- mark one or more packages as non explicitly installed
+alias yauro="yaourt -Orphans"
 
 extract() {
     local c e i
@@ -208,4 +208,4 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PS1="(\u@\h)─(\w)─>"
+PS1="\n(\u@\h)─(\w)─> "
