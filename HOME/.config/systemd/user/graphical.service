@@ -1,0 +1,11 @@
+[Unit]
+Description=Init Graphical System
+After=systemd-user-sessions.service
+
+[Service]
+PAMName=login
+Environment=XDG_VTNR=5
+ExecStart=/usr/bin/startx
+
+[Install]
+WantedBy=default.target

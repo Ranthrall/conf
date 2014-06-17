@@ -94,7 +94,14 @@ ${HOME}/X.sh
 
 #`find $HOME/.config/xfce4/panel -iname '*' -type f`
 #`find /etc/X11/xdm -iname '*' -type f`
+`find $HOME/.config/systemd/user -iname '*' -type f`
+`find $HOME/.config/alsi -iname '*' -type f`
 
+$HOME/.config/simple-autostarter.launchers
+$HOME/.config/compton.conf
+
+
+##########################################################################################
 ); echo -e "Concluído.\n"
 
 echo -n "Verificando arquivos... "; checkfiles; echo -e "Concluído.\n"

@@ -21,6 +21,9 @@ if test -d /etc/profile.d/; then
     unset profile
 fi
 
+#Come back .Xresources!!!
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 #exec startxfce4
 #exec mate-session
 exec openbox-session
