@@ -48,13 +48,15 @@ declare -x FILES=(
 
 # HOME
 ${HOME}/.tmux.conf
+${HOME}/.screenrc
 ${HOME}/.Xresources
 ${HOME}/.xsessions
 ${HOME}/.xinitrc
 ${HOME}/.vimrc
 ${HOME}/.face
-${HOME}/winemaldito.sh
-${HOME}/X.sh
+${HOME}/.bashrc
+`find $HOME/Develop -depth 1 -iname '*' -type f`
+
 
 # lxdm custom theme
 #/usr/share/lxdm/themes/BlackICE/background.png

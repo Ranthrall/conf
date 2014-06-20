@@ -35,8 +35,14 @@ name = PCManFM (Desktop)
 command = pcmanfm --desktop
 
 [Launcher7]
-enable = True
+enable = False
 timer = 1
 name = Compton
 command = compton
+
+[Launcher8]
+enable = True
+timer = 1
+name = Cairo Compmgr
+command = cairo-compmgr
 

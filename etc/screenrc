@@ -6,18 +6,15 @@
 # Flaws of termcap and standard settings are done here.
 #
 
-startup_message off
+#startup_message off
 
 #defflow on # will force screen to process ^S/^Q
 
-#defshell /usr/bin/fish
 deflogin on
 #autodetach off
-termcapinfo xterm* ti@:te@
-defscrollback 8000
 
 vbell on
-vbell_msg "   Ding!  ----  Ding!  "
+vbell_msg "   Wuff  ----  Wuff!!  "
 
 # all termcap entries are now duplicated as terminfo entries.
 # only difference should be the slightly modified syntax, and check for

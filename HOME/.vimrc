@@ -130,8 +130,12 @@ syntax enable
 
 "colorscheme darkblue
 "colorscheme koehler
-colorscheme dejavu
+"colorscheme dejavu
+"colorscheme desert
+"colorscheme wombat256
+colorscheme xoria256
 set background=dark
+"set t_Co=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -139,6 +143,8 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+    colorscheme habilight
     set background=light
 endif
 
