@@ -50,13 +50,18 @@ declare -x FILES=(
 ${HOME}/.tmux.conf
 ${HOME}/.screenrc
 ${HOME}/.Xresources
-${HOME}/.xsessions
+#${HOME}/.xsessions
 ${HOME}/.xinitrc
 ${HOME}/.vimrc
 ${HOME}/.face
 ${HOME}/.bashrc
-`find $HOME/Develop -depth 1 -iname '*' -type f`
-
+$HOME/.config/simple-autostarter.launchers
+$HOME/.config/compton.conf
+`find $HOME/Develop -maxdepth 1 -iname '*' -type f`
+`find $HOME/.config/systemd/user -iname '*' -type f`
+`find $HOME/.config/alsi -iname '*' -type f`
+`find $HOME/.config/fish -maxdepth 1 -iname '*' -type f`
+#`find $HOME/.config/xfce4/panel -iname '*' -type f`
 
 # lxdm custom theme
 #/usr/share/lxdm/themes/BlackICE/background.png
@@ -84,23 +89,16 @@ ${HOME}/.bashrc
 #/etc/lightdm/lightdm.conf
 #/etc/lightdm/lightdm-gtk-greeter.conf
 /etc/X11/xorg.conf
+`find /etc/X11/xdm -maxdepth 0 -iname '*' -type f`
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
-#/etc/asound.conf
+/etc/asound.conf
 
 # udev
 #/etc/udev/rules.d/80-net-name-slot.rules
 
 # boot
 /boot/syslinux/syslinux.cfg
-
-#`find $HOME/.config/xfce4/panel -iname '*' -type f`
-#`find /etc/X11/xdm -iname '*' -type f`
-`find $HOME/.config/systemd/user -iname '*' -type f`
-`find $HOME/.config/alsi -iname '*' -type f`
-
-$HOME/.config/simple-autostarter.launchers
-$HOME/.config/compton.conf
 
 
 ##########################################################################################

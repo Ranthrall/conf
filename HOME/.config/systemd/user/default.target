@@ -1,4 +1,0 @@
-[Unit]
-Description=Systemd defaults user units
-Wants=graphical.service
-
