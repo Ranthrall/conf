@@ -13,7 +13,7 @@
 #test `whoami` == laracraft304 && return
 
 # Ativar completações do bash
-source /usr/share/bash-completion/bash_completion
+#source /usr/share/bash-completion/bash_completion
 
 # Ativar o gancho "command-not-found" do pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash
@@ -210,4 +210,4 @@ On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
 PS1="\n[\u@\h:\w]\$ "
-EXPORT TERM=screen-256color
+export TERM=screen-256color

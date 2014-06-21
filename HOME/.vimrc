@@ -1,47 +1,3 @@
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
-"       Amir Salihefendic
-"       http://amix.dk - amix@amix.dk
-"
-" Version: 
-"       5.0 - 29/05/12 15:43:36
-"
-" Blog_post: 
-"       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
-"
-" Awesome_version:
-"       Get this config, nice color schemes and lots of plugins!
-"
-"       Install the awesome version from:
-"
-"           https://github.com/amix/vimrc
-"
-" Syntax_highlighted:
-"       http://amix.dk/vim/vimrc.html
-"
-" Raw_version: 
-"       http://amix.dk/vim/vimrc.txt
-"
-" Sections:
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -85,7 +41,7 @@ set number
 " Height of the command bar
 "set cmdheight=2
 
-" A buffer becomes hidden when it is abandoned
+" A buffer becomes nohidden when it is abandoned
 set nohidden
 
 " Configure backspace so it acts as it should act
@@ -112,6 +68,7 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -134,8 +91,9 @@ syntax enable
 "colorscheme desert
 "colorscheme wombat256
 colorscheme xoria256
+"colorscheme dusk
 set background=dark
-"set t_Co=256
+set t_Co=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -145,10 +103,11 @@ if has("gui_running")
     set guitablabel=%M\ %t
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
     colorscheme habilight
+    "colorscheme soso
     set background=light
 endif
 
-" Set utf8 as standard encoding and en_US as the standard language
+" Set utf8 as standard encoding
 set encoding=utf8
 
 " Use Unix as the standard file type
@@ -227,8 +186,6 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>tt :tabNext<cr>
-map <C-t> :tabNext<cr>
-map <C-n> :tabnew<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -309,6 +266,16 @@ map <C-s> :w!<cr>
 imap <C-s> <Esc>:w!<cr><Insert>
 map <C-q> :q<cr>
 imap <C-q> <Esc>:q<cr>
+
+map <C-t> :tabNext<cr>
+map <C-n> :tabnew<cr>
+
+nmap <M-Up> mz:m-2<cr>`z
+nmap <M-Down> mz:m+<cr>`z
+vmap <M-Up> :m'<-2<cr>`>my`<mzgv`yo`z
+vmap <M-Down> :m'>+<cr>`<my`>mzgv`yo`z
+imap <M-Up> <Esc>mz:m-2<cr>`z<Insert>
+imap <M-Down> <Esc>mz:m+<cr>`z<Insert>
 
 set mouse=a
 
