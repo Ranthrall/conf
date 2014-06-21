@@ -89,7 +89,7 @@ $HOME/.config/compton.conf
 #/etc/lightdm/lightdm.conf
 #/etc/lightdm/lightdm-gtk-greeter.conf
 /etc/X11/xorg.conf
-`find /etc/X11/xdm -maxdepth 0 -iname '*' -type f`
+`find /etc/X11/xdm -maxdepth 1 -iname '*' -type f`
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
 /etc/asound.conf
