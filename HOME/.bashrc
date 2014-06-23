@@ -7,7 +7,7 @@
 
 # Se conexão via SSH, executar o screen
 [ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR ssh
-[ "$TERM" == "screen" ] && alias exit='screen -X detach'
+[ "$TERM" == "screen" ] && alias exit='screen -X detach' && return
 
 # Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
 #test `whoami` == laracraft304 && return
@@ -210,4 +210,4 @@ On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
 PS1="\n[\u@\h:\w]\$ "
-export TERM=screen-256color
+# export TERM=screen-256color
