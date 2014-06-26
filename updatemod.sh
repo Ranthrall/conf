@@ -57,10 +57,10 @@ ${HOME}/.face
 ${HOME}/.bashrc
 $HOME/.config/simple-autostarter.launchers
 $HOME/.config/compton.conf
+$HOME/.config/fish/config.fish
 `find $HOME/Develop -maxdepth 1 -iname '*' -type f`
-`find $HOME/.config/systemd/user -iname '*' -type f`
+#`find $HOME/.config/systemd/user -iname '*' -type f`
 `find $HOME/.config/alsi -iname '*' -type f`
-`find $HOME/.config/fish -maxdepth 1 -iname '*' -type f`
 #`find $HOME/.config/xfce4/panel -iname '*' -type f`
 
 # lxdm custom theme

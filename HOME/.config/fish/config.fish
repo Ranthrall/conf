@@ -11,7 +11,8 @@ function fish_greeting -d "motd"
 	if test -z "$SSH_TTY"
 		alsi -ub -f
 	else
-        alsi -ub
+        uname -norms
+        date
         screen -X msgwait 5
         function exit; screen -X detach; end
     end
@@ -99,12 +100,12 @@ function fish_prompt -d "Write out the prompt"
     '❱'                                \
     (set_color white)
     if test $laststatus -eq 0
-        printf "%s✔%s≻%s " \
+        printf "%s✔%s≻%s "  \
         (set_color -o green)\
         (set_color white)   \
         (set_color normal)
     else
-        printf "%s✘%s≻%s " \
+        printf "%s✘%s≻%s "  \
         (set_color -o red)  \
         (set_color white)   \
         (set_color normal)
