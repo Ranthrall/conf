@@ -82,7 +82,7 @@ set mat=2
 " Enable syntax highlighting
 syntax enable
 
-colorscheme wombat256mod
+colorscheme wombat
 set background=dark
 set t_Co=256
 
@@ -90,11 +90,10 @@ set t_Co=256
 if has("gui_running")
     set guioptions-=T
     set guioptions+=e
-    set guioptions+=m
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-    colorscheme morning
+    colorscheme ironman
     set background=light
 endif
 
@@ -127,6 +126,10 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
 set ai "Auto indent
 set si "Smart indent
 set nowrap "NO Wrap lines
@@ -135,6 +138,10 @@ set nowrap "NO Wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
@@ -146,6 +153,9 @@ map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
+
+" Close all the buffers
+map <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>

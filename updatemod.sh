@@ -1,9 +1,9 @@
 #!/bin/sh
 # Lara Maia © 2012 ~ 2013 <lara@craft.net.br>
 # Mod by BlackXT <blackice@craft.net.br>
-# version: 0.1
+# version: 0.2 - RPi Mod
 
-test $(id -u) == 0 && echo "EPA" && exit 1
+#test $(id -u) == 0 && echo "EPA" && exit 1
 test "$1" == "" && echo "Forneça a mensagem do commit" && exit 1
 
 function checkfiles() {
@@ -50,17 +50,19 @@ declare -x FILES=(
 ${HOME}/.tmux.conf
 ${HOME}/.screenrc
 ${HOME}/.Xresources
-#${HOME}/.xsessions
+${HOME}/.xsessions
 ${HOME}/.xinitrc
 ${HOME}/.vimrc
 ${HOME}/.face
 ${HOME}/.bashrc
-$HOME/.config/simple-autostarter.launchers
-$HOME/.config/compton.conf
+${HOME}/.asoundrc
+${HOME}/.asoundrc.asoundconf
+#$HOME/.config/simple-autostarter.launchers
+#$HOME/.config/compton.conf
 $HOME/.config/fish/config.fish
 `find $HOME/Develop -maxdepth 1 -iname '*' -type f`
 #`find $HOME/.config/systemd/user -iname '*' -type f`
-`find $HOME/.config/alsi -iname '*' -type f`
+#`find $HOME/.config/alsi -iname '*' -type f`
 #`find $HOME/.config/xfce4/panel -iname '*' -type f`
 
 # lxdm custom theme
@@ -81,15 +83,15 @@ $HOME/.config/fish/config.fish
 /etc/makepkg.conf
 /etc/yaourtrc
 /etc/pacman.conf
-/etc/pacman.d/mirrorlist
+#/etc/pacman.d/mirrorlist
 /etc/hostname
 /etc/mkinitcpio.conf
 #/etc/netctl/icenet
 #/etc/lxdm/lxdm.conf
 #/etc/lightdm/lightdm.conf
 #/etc/lightdm/lightdm-gtk-greeter.conf
-/etc/X11/xorg.conf
-`find /etc/X11/xdm -maxdepth 1 -iname '*' -type f`
+#/etc/X11/xorg.conf
+#`find /etc/X11/xdm -maxdepth 1 -iname '*' -type f`
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
 /etc/asound.conf
@@ -98,7 +100,8 @@ $HOME/.config/fish/config.fish
 #/etc/udev/rules.d/80-net-name-slot.rules
 
 # boot
-/boot/syslinux/syslinux.cfg
+/boot/config.txt
+/boot/cmdline.txt
 
 
 ##########################################################################################
@@ -108,7 +111,7 @@ echo -n "Verificando arquivos... "; checkfiles; echo -e "Concluído.\n"
 
 echo -n "Construindo o commit..."; git add *; git commit -am "$1"; echo -e "Concluído.\n"
 
-echo -n "Enviando commit"; git push; echo -e "Concluído.\n"
+echo -n "Enviando commit"; git push origin RPi; echo -e "Concluído.\n"
 
 echo "Tarefa completada com sucesso!"
 exit 0

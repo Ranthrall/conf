@@ -7,14 +7,31 @@ set -x XDG_CONFIG_HOME "$HOME"/.config
 #COLORS!!!!
 set -x TERM screen-256color
 
+#MOTD!
 function fish_greeting -d "motd"
+        echo -e "\e[1;31;40m  Welcome to BlackPi  
+\e[1;32m     .~~.   .~~.      
+\e[1;32m    '. \ ' ' / .'     
+\e[1;31m     .~ .~~~..~.      
+\e[1;31m    : .~.'~'.~. :     
+\e[1;31m   ~ (   ) (   ) ~    
+\e[1;31m  ( : '~'.~.'~' : )   
+\e[1;31m   ~ .~ (   ) ~. ~    
+\e[1;31m    (  : '~' :  )     
+\e[1;31m     '~ .~~~. ~'      
+\e[1;31m         '~'          
+\e[1;32m      Have fun!       \e[0m"
 	if test -z "$SSH_TTY"
-		alsi -ub -f
-	else
+		#alsi -ub -f
         uname -norms
         date
+	else 
+        #alsi -ub
         screen -X msgwait 5
         function exit; screen -X detach; end
+        uname -norms
+        date
+        who
     end
 end
 
@@ -100,12 +117,12 @@ function fish_prompt -d "Write out the prompt"
     '❱'                                \
     (set_color white)
     if test $laststatus -eq 0
-        printf "%s✔%s≻%s "  \
+        printf "%s✔%s≻%s " \
         (set_color -o green)\
         (set_color white)   \
         (set_color normal)
     else
-        printf "%s✘%s≻%s "  \
+        printf "%s✘%s≻%s " \
         (set_color -o red)  \
         (set_color white)   \
         (set_color normal)

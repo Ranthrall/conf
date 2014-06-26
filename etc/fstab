@@ -2,12 +2,7 @@
 # /etc/fstab: static file system information
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
-# UUID=ee4093b1-ac08-4e57-b52d-fa6ad673d678
-/dev/sda3           	/         	ext4      	rw,relatime,data=ordered	0 1
-
-# UUID=b995420b-16b3-4b7e-b4d2-88b92053306c
-/dev/sda4           	/home		ext4       	rw	0 3
-
-# UUID=4eaca65b-3a81-41f7-8d2f-e851981ffcdb
-/dev/sda1           	/boot     	ext2      	rw,relatime	0 2
-
+/dev/mmcblk0p1  /boot    vfat   defaults     0       0
+/dev/mmcblk0p5  /        ext4   noatime,discard 0    0
+/dev/mmcblk0p3  none     swap   defaults     0       0
+tmpfs           /var/log tmpfs  nodev,nosuid,size=16M 0 0
