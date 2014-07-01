@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-x0vncserver -AAAAwordFile=/home/blackice/.vnc/AAAAwd -AcceptPointerEvents=off -QueryConnect=on > /home/blackice/Xvnc.log 2>&1 &
+x0vncserver -passwordFile=/home/blackice/.vnc/passwd -AcceptPointerEvents=off -QueryConnect=on > /home/blackice/Xvnc.log 2>&1 &
 
