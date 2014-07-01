@@ -5,8 +5,8 @@ defflow on
 defshell /usr/bin/fish
 deflogin on
 autodetach on
-termcapinfo xterm* ti@:te@
-termcapinfo vte3* ti@:te@
+#termcapinfo xterm* ti@:te@
+#termcapinfo vte3* ti@:te@
 defscrollback 8000
 escape ^bb
 msgwait 0
@@ -14,13 +14,6 @@ msgwait 0
 vbell on
 vbell_msg "   Ding!  ----  Ding!  "
 
-bind ^k
-bind ^\
-bind ^S
-bind K kill
-bind I login on
-bind O login off
-bind } history
 bind b next
 hardstatus off
 hardstatus alwayslastline

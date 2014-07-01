@@ -13,16 +13,17 @@
 #    if [[ -z "$ID" ]] ;then
 #        tmux new-session && exit
 #    else
-#        tmux attach-session -t "$ID" && exit
+#        tmux attach-session -t 0 && exit
 #    fi
 #fi
 
-[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR sshpi
+#[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec fish && return
+[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR sshPi  
 ##[ -z "$STY" ] && exec screen -xRR sshpi
 
 ##Para o Pi
-[ "$TERM" == "screen" ] && alias exit='screen -X detach' 
-#[ ! -z "$TMUX" ] && alias exit='tmux detach-client'
+[ "$TERM" == "screen" ] && alias exit='screen -X detach'
+#[ ! -z "$TMUX" ] && alias exit='tmux detach-client' && return
 
 echo -e "\033[1;32m
     .~~.   .~~.
