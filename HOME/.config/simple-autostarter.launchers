@@ -1,5 +1,5 @@
 [Launcher1]
-enable = True
+enable = False
 timer = 0
 name = Notificador
 command = /usr/lib/notify-osd-customizable/notify-osd
@@ -7,40 +7,52 @@ command = /usr/lib/notify-osd-customizable/notify-osd
 [Launcher2]
 enable = True
 timer = 3
+name = Annoying thing
+command = numlockx
+
+[Launcher3]
+enable = True
+timer = 0
+name = Dunst Notificator
+command = dunst -conf ~/.dunstrc
+
+[Launcher4]
+enable = True
+timer = 3
 name = Guake Terminal
 command = guake
 
-[Launcher3]
+[Launcher5]
 enable = True
 timer = 2
 name = Cairo Dock
 command = cairo-dock
 
-[Launcher4]
+[Launcher6]
 enable = True
 timer = 1
 name = NVDock
 command = nvdock
 
-[Launcher5]
+[Launcher7]
 enable = True
 timer = 25
 name = CopyAgent
 command = CopyAgent
 
-[Launcher6]
+[Launcher8]
 enable = True
 timer = 0
 name = PCManFM (Desktop)
 command = pcmanfm --desktop
 
-[Launcher7]
+[Launcher9]
 enable = True
 timer = 1
 name = Compton
 command = compton
 
-[Launcher8]
+[Launcher10]
 enable = False
 timer = 1
 name = Cairo Compmgr

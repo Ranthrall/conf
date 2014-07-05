@@ -24,6 +24,7 @@ fi
 #Come back .Xresources!!!
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-#exec startxfce4
+exec startxfce4
 #exec mate-session
-exec openbox-session
+#exec openbox-session
+#exec gnome-session
