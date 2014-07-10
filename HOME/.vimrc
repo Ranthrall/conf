@@ -129,7 +129,7 @@ set tabstop=4
 
 set ai "Auto indent
 set si "Smart indent
-set nowrap "NO Wrap lines
+set wrap "NO Wrap lines
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
