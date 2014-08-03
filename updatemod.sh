@@ -70,7 +70,7 @@ ${HOME}/.config/fish/config.fish
 /etc/pacman.d/mirrorlist
 /etc/hostname
 /etc/mkinitcpio.conf
-/etc/X11/xorg.conf
+`find /etc/X11/xorg.conf.d -iname '*' -type f`
 `find /etc/X11/xdm -maxdepth 1 -iname '*' -type f`
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
