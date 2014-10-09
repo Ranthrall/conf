@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xfdesktop-menu []>
+<xfdesktop-menu>
+<title name="Desktop Menu"/>
+<separator/>
+<menu name="Development">
+	<app name="Geany" cmd="geany"/>
+	<app name="OpenJDK Monitoring &amp; Management Console" cmd="jconsole"/>
+	<app name="OpenJDK Policy Tool" cmd="policytool"/>
+	<app name="Qt4 Assistant" cmd="assistant-qt4"/>
+	<app name="Qt4 Designer" cmd="designer-qt4"/>
+	<app name="Qt4 Linguist" cmd="linguist-qt4"/>
+	<app name="Qt4 QDbusViewer" cmd="qdbusviewer-qt4"/>
+</menu>
+<menu name="Editors">
+	<app name="gedit" cmd="gedit"/>
+	<app name="Mousepad" cmd="mousepad"/>
+	<app name="Nano" cmd="nano" term="true"/>
+	<app name="Vi" cmd="vi" term="true"/>
+	<app name="Vim" cmd="vim" term="true"/>
+</menu>
+<menu name="Games">
+	<menu name="Arcade">
+		<app name="Armagetron Advanced" cmd="armagetronad"/>
+	</menu>
+</menu>
+<menu name="Graphics">
+	<app name="GNU Image Manipulation Program" cmd="gimp-2.8"/>
+	<app name="Inkscape" cmd="inkscape"/>
+	<app name="Ristretto Image Viewer" cmd="ristretto"/>
+</menu>
+<menu name="Multimedia">
+	<app name="ALSA mixer" cmd="alsamixer" term="true"/>
+	<app name="ALSA player" cmd="alsaplayer"/>
+	<app name="Audacious" cmd="audacious"/>
+	<app name="Audio Mixer" cmd="xfce4-mixer"/>
+	<app name="Gtv" cmd="gtv"/>
+	<app name="Webcam Application" cmd="wxcam"/>
+	<app name="Xfburn" cmd="xfburn"/>
+</menu>
+<menu name="Network">
+	<app name="Avahi SSH Server Browser" cmd="bssh"/>
+	<app name="Avahi VNC Server Browser" cmd="bvnc"/>
+	<app name="FileZilla" cmd="filezilla"/>
+	<app name="FireFox" cmd="firefox"/>
+	<app name="FTP" cmd="ftp" term="true"/>
+	<app name="Google Chrome" cmd="google-chrome"/>
+	<app name="Lynx" cmd="lynx" term="true"/>
+	<app name="Mail" cmd="mail" term="true"/>
+	<app name="Mail Reader" cmd="exo-open --launch MailReader"/>
+	<app name="Pidgin Internet Messenger" cmd="pidgin"/>
+	<app name="RealVNC Viewer" cmd="realvnc-viewer"/>
+	<app name="Steam" cmd="steam"/>
+	<app name="Talk" cmd="talk" term="true"/>
+	<app name="Telnet" cmd="telnet" term="true"/>
+	<app name="Transmission" cmd="transmission-gtk"/>
+	<app name="Web Browser" cmd="exo-open --launch WebBrowser"/>
+	<app name="Zenmap" cmd="zenmap"/>
+	<app name="Zenmap (as root)" cmd="/usr/share/zenmap/su-to-zenmap.sh"/>
+</menu>
+<menu name="Office">
+	<app name="Dictionary" cmd="xfce4-dict"/>
+	<app name="ePDFViewer" cmd="epdfview"/>
+	<app name="Orage Calendar" cmd="orage"/>
+	<app name="Orage Globaltime" cmd="globaltime"/>
+</menu>
+<menu name="Other">
+	<app name="Amnesia The Dark Descent" cmd="steam steam://rungameid/57300"/>
+	<app name="CMake" cmd="cmake-gui"/>
+	<app name="FontForge" cmd="fontforge"/>
+	<app name="FreeRapid Downloader" cmd="freerapid"/>
+	<app name="Gratuitous Space Battles" cmd="steam steam://rungameid/41800"/>
+	<app name="IcedTea-Web Control Panel" cmd="itweb-settings"/>
+	<app name="Minecraft" cmd="minecraft"/>
+	<app name="Mineshafter" cmd="mineshafter"/>
+	<app name="Pixi" cmd="pixi"/>
+	<app name="Pixi 2" cmd="pixi2"/>
+	<app name="Qt V4L2 test Utility" cmd="qv4l2"/>
+	<app name="Services" cmd="systemadm"/>
+	<app name="VVVVVV" cmd="steam steam://rungameid/70300"/>
+	<app name="Zen Bound 2" cmd="steam steam://rungameid/61600"/>
+</menu>
+<menu name="Shells">
+	<app name="GIT" cmd="git" term="true"/>
+	<app name="Guake Terminal" cmd="guake"/>
+	<app name="Root Terminal" cmd="gksu -l gnome-terminal"/>
+	<app name="Thunar File Manager" cmd="thunar"/>
+	<app name="UXTerm" cmd="uxterm"/>
+	<app name="Xfce Terminal" cmd="xfce4-terminal"/>
+	<app name="Xterm" cmd="xterm"/>
+</menu>
+<menu name="System">
+	<menu name="Settings">
+		<menu name="GNOME">
+			<app name="Adobe Flash Player" cmd="flash-player-properties"/>
+			<app name="Any Color You Like" cmd="acyl"/>
+			<app name="Guake Preferences" cmd="guake-prefs"/>
+			<app name="Privilege granting" cmd="gksu-properties"/>
+		</menu>
+		<menu name="Xfce">
+			<app name="Orage preferences" cmd="orage -p"/>
+			<app name="Screensaver" cmd="xscreensaver-demo"/>
+			<app name="Settings Manager" cmd="xfce4-settings-manager"/>
+		</menu>
+		<app name="Accessibility" cmd="xfce4-accessibility-settings"/>
+		<app name="Appearance" cmd="xfce4-appearance-settings"/>
+		<app name="Customize Look and Feel" cmd="lxappearance"/>
+		<app name="Default Sound Card" cmd="asoundconf-gtk"/>
+		<app name="Desktop" cmd="xfdesktop-settings"/>
+		<app name="Display" cmd="xfce4-display-settings"/>
+		<app name="File Manager" cmd="thunar-settings"/>
+		<app name="Keyboard" cmd="xfce4-keyboard-settings"/>
+		<app name="MIME Type Editor" cmd="xfce4-mime-settings"/>
+		<app name="Mouse and Touchpad" cmd="xfce4-mouse-settings"/>
+		<app name="Notifications" cmd="xfce4-notifyd-config"/>
+		<app name="NVIDIA X Server Settings" cmd="nvidia-settings"/>
+		<app name="Panel" cmd="xfce4-panel --preferences"/>
+		<app name="Power Manager" cmd="xfce4-power-manager-settings"/>
+		<app name="Preferred Applications" cmd="exo-preferred-applications"/>
+		<app name="Removable Drives and Media" cmd="thunar-volman-settings"/>
+		<app name="Session and Startup" cmd="xfce4-session-settings"/>
+		<app name="Settings Editor" cmd="xfce4-settings-editor"/>
+		<app name="Window Manager" cmd="xfwm4-settings"/>
+		<app name="Window Manager Tweaks" cmd="xfwm4-tweaks-settings"/>
+		<app name="Workspaces" cmd="xfwm4-workspace-settings"/>
+	</menu>
+	<app name="Avahi Zeroconf Browser" cmd="avahi-discover"/>
+	<app name="Bulk Rename" cmd="/usr/lib/Thunar/ThunarBulkRename"/>
+	<app name="Configuration Editor" cmd="gconf-editor"/>
+	<app name="dconf Editor" cmd="dconf-editor"/>
+	<app name="GParted" cmd="gparted_polkit"/>
+	<app name="Graphical Disk Map" cmd="gdmap"/>
+	<app name="Htop" cmd="htop" term="true"/>
+	<app name="Log Out" cmd="xfce4-session-logout"/>
+	<app name="NVIDIA Dock" cmd="nvdock"/>
+	<app name="PkgBrowser" cmd="pkgbrowser"/>
+	<app name="Task Manager" cmd="xfce4-taskmanager"/>
+</menu>
+<menu name="Utilities">
+	<app name="7-Zip FM" cmd="7zFM"/>
+	<app name="About Xfce" cmd="xfce4-about"/>
+	<app name="Application Finder" cmd="xfce4-appfinder"/>
+	<app name="Archive Manager" cmd="file-roller"/>
+	<app name="Clipman" cmd="xfce4-clipman"/>
+	<app name="File Manager" cmd="exo-open --launch FileManager"/>
+	<app name="Notes" cmd="xfce4-notes"/>
+	<app name="Run Program..." cmd="xfce4-appfinder --collapsed"/>
+	<app name="Screenshot" cmd="xfce4-screenshooter"/>
+	<app name="SystemDX" cmd="ssx systemdx"/>
+	<app name="Terminal Emulator" cmd="exo-open --launch TerminalEmulator"/>
+</menu>
+<separator/>
+<menu name="Xfce">
+	<app name="About" cmd="xfce4-about"/>
+	<separator/>
+	<builtin name="Quit" cmd="quit"/>
+</menu>
+</xfdesktop-menu>

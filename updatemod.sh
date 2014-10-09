@@ -54,8 +54,9 @@ ${HOME}/.xinitrc
 ${HOME}/.vimrc
 ${HOME}/.face
 ${HOME}/.bashrc
-${HOME}/.config/simple-autostarter.launchers
-${HOME}/.config/compton.conf
+#${HOME}/.config/simple-autostarter.launchers
+`find ${HOME}/.config/xfce4 -iname '*' -type f`
+#${HOME}/.config/compton.conf
 ${HOME}/.config/fish/config.fish
 `find $HOME/Develop -maxdepth 1 -iname '*' -type f`
 `find $HOME/.config/alsi -iname '*' -type f`
@@ -64,7 +65,7 @@ ${HOME}/.config/fish/config.fish
 /etc/screenrc
 /etc/bash.bashrc
 /etc/fstab
-/etc/makepkg.conf
+#/etc/makepkg.conf
 /etc/yaourtrc
 /etc/pacman.conf
 /etc/pacman.d/mirrorlist
@@ -74,7 +75,7 @@ ${HOME}/.config/fish/config.fish
 `find /etc/X11/xdm -maxdepth 1 -iname '*' -type f`
 /etc/systemd/logind.conf
 /etc/systemd/journald.conf
-/etc/asound.conf
+#/etc/asound.conf
 
 # boot
 /boot/syslinux/syslinux.cfg
