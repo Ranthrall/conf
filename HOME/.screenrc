@@ -17,6 +17,6 @@ vbell_msg "   Ding!  ----  Ding!  "
 bind b next
 hardstatus off
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][ %= %{= kw}%-w %{= bW}[%n %t]%{= kw}%+w %= %{g}][%{B} %d-%m %{W} %c %{g}]'
+hardstatus string '%{= kG}[ %{g}%H %{G}][ %= %{= kw}%-w %{= bW}[%n %t]%{= kw}%+w %= %{g}][%{B} %d-%m %{W} %c %{g}]'
 #hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw} %? %-Lw %? %{r} (%{W} %n * %f %t %? (%u) %? %{r} ) %{w} %? %+Lw %? %? %= %{g}][%{B} %m-%d %{W} %c %{g}]'
 

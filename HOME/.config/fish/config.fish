@@ -100,16 +100,18 @@ function yauimpl; yaourt -D --asdep $argv; end
 function fish_prompt -d "Write out the prompt"
     set laststatus $status
     set_color -b black
-    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s'\
+    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s'\
     (set_color -o white)               \
     '❰'                                \
     (set_color green)                  \
     $USER                              \
     (set_color white)                  \
     '@'                                \
-    (set_color blue)                   \
+    (set_color -b white)               \
+    (set_color black)               \
     (hostname)                         \
-    (set_color white)                  \
+    (set_color -b black)               \
+    (set_color -o white)               \
     '❙'                                \
     (set_color yellow)                 \
     (echo $PWD | sed -e "s|^$HOME|~|") \

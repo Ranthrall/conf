@@ -18,7 +18,8 @@
 #fi
 
 #[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec fish && return
-[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR sshPi  
+[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] & exec screen -xRR sshPi  
+#[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec spiled "SSH" 3 up & exec screen -xRR sshPi  
 ##[ -z "$STY" ] && exec screen -xRR sshpi
 
 ##Para o Pi

@@ -379,6 +379,7 @@ imap <M-Up> <Esc>mz:m-2<cr>`z<Insert>
 imap <M-Down> <Esc>mz:m+<cr>`z<Insert>
 
 set mouse=a
+set pastetoggle=<F2>
 
 """"""""""""""""""""""""""""""""""""
 " ==> "F" mappings (for now NERDTree/Taglist)
