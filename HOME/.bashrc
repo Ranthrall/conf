@@ -5,15 +5,8 @@
 # Check if interactive
 [ -z "$PS1" ] && return
 
-# Se conexão via SSH, executar o screen
-[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR ssh
-[ "$TERM" == "screen" ] && alias exit='screen -X detach' && return
-
-# Check if user is my beaultyful, fantastic, cute, stunning, angel of my life laracraft304
-#test `whoami` == laracraft304 && return
-
 # Ativar completações do bash
-#source /usr/share/bash-completion/bash_completion
+source /usr/share/bash-completion/bash_completion
 
 # Ativar o gancho "command-not-found" do pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash

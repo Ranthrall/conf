@@ -82,7 +82,7 @@ set mat=2
 " Enable syntax highlighting
 syntax enable
 
-colorscheme wombat256mod
+" colorscheme wombat256mod
 set background=dark
 set t_Co=256
 

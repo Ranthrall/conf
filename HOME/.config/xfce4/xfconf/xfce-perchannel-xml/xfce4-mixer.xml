@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-mixer" version="1.0">
-  <property name="sound-card" type="string" value="PlaybackudiointernoEstreoanalgicoPulseAudioMixer"/>
+  <property name="sound-card" type="string" value="HDANVidiaAlsamixer"/>
   <property name="sound-cards" type="empty">
     <property name="HDAATISBAlsamixer" type="array">
       <value type="string" value="Rear Mic Boost"/>

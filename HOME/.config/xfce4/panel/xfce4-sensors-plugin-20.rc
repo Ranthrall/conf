@@ -15,6 +15,7 @@ Small_Spacings=false
 Command_Name=xfce4-sensors
 Number_Chips=3
 Suppress_Hddtemp_Message=false
+Suppress_Tooltip=false
 Preferred_Width=487
 Preferred_Height=522
 

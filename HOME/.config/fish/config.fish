@@ -1,11 +1,16 @@
-# Cores para o grep, egrep e zgrep
-set -x GREP_OPTIONS "--color=auto"
+# Cores padrões
+set fish_color_normal white
+set fish_color_command green
+set fish_color_redirection blue
+set fish_color_end yellow -o
+set fish_color_error red -o
+set fish_color_match blue -o
 
 # XDG
 set -x XDG_CONFIG_HOME "$HOME"/.config
 
 #COLORS!!!!
-set -x TERM screen-256color
+#set -x TERM screen-256color
 
 function fish_greeting -d "motd"
 	if test -z "$SSH_TTY"
@@ -30,7 +35,7 @@ function ping; grc -es --colour=auto ping -c 3 $argv; end
 function traceroute; grc -es --colour=auto traceroute $argv; end
 #
 function gvim; gvim_checkpath $argv; end
-function geany; geany_checkpath $argv; end
+#function geany; geany_checkpath $argv; end
 #
 function diff; vimdiff $argv; end
 function grep; /usr/bin/grep --color=auto $argv; end
@@ -67,17 +72,44 @@ function chown; /usr/bin/chown --preserve-root $argv; end
 function chmod; /usr/bin/chmod --preserve-root $argv; end
 function chgrp; /usr/bin/chgrp --preserve-root $argv; end
 #YAOURT
+function yaourt; yaourt_wrapper $argv; end
 function yau; yaourt -S $argv; end
 function yauu; yaourt -Syu $argv; end
 function yaur; yaourt -Rcns $argv; end
-function yaus; yaourt -Ss $argv; end
+function yaus; yaourt $argv; end
 function yaui; yaourt -Si $argv; end
 function yaulo; yaourt -Qqdt $argv; end
+function yauro; yaourt -Rcns (yaourt -Qqdt); end
 function yauc; yaourt -Scc $argv; end
 function yaulf; yaourt -Ql $argv; end
 function yauexpl; yaourt -D --asexp $argv; end
 function yauimpl; yaourt -D --asdep $argv; end
 
+function yaourt_wrapper -d "yaourt wrapper for rsync db with xfer"
+    set -l CONF /etc/pacman.conf
+    set -l temp (mktemp)
+    set -l refresh 0
+    set -l update 0
+
+    switch $argv[1]
+        case "-Sy"
+            set refresh 1
+        case "-Syu" "-Suy"
+            set refresh 1
+            set update 1
+        case '*'
+            command yaourt $argv
+    end
+
+    if test $refresh -eq 1
+        cat $CONF | grep -v Xfer | sudo tee $temp >/dev/null ; or exit 1
+        sudo pacman -S --config $temp -y ; or exit 1
+    end
+
+    if test $update -eq 1
+        command yaourt -Su
+    end
+end
 
 #PROMPT
 function fish_prompt -d "Write out the prompt"

@@ -1,0 +1,16 @@
+show_frame=false
+fg_set=false
+bg_set=false
+timezone=
+width_set=true
+width=92
+height_set=false
+lines_vertically=true
+rotation=0
+data0=%H:%M
+font0=Coda 18
+data1=%x
+font1=Coda 10
+tooltip=%d de %B de %Y
+hib_timing=false
+

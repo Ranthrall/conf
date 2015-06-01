@@ -1,4 +1,3 @@
-# BlackICE -  09/2013
 #    yaourtrc  - Configuration for yaourt
 # 
 #   See yaourtrc(5) for more information
@@ -9,10 +8,10 @@
 #AUTOSAVEBACKUPFILE=0
 #DEVELSRCDIR=""
 #DEVEL=0
-EDITOR="vim"
+#EDITOR="$EDITOR"
 #FORCEENGLISH=0
 #FORCE=0
-TMPDIR="/tmp"
+#TMPDIR="/tmp"
 #NO_TESTDB=0
 
 # SUDO
@@ -26,12 +25,12 @@ TMPDIR="/tmp"
 #SYNCSERVER=""
 
 # AUR
-AURURL="https://aur.archlinux.org"
-AURCOMMENT=0
+#AURURL="https://aur.archlinux.org"
+#AURCOMMENT=5
 #AURDEVELONLY=0
 #AURSEARCH=1
-AURUPGRADE=1
-AURVOTE=0
+#AURUPGRADE=0
+#AURVOTE=1
 
 # Build
 #EXPORT=0           # Export to 1: EXPORTDIR or PKGDEST
@@ -40,11 +39,11 @@ AURVOTE=0
 #EXPORTDIR=""       # If empty, use makepkg's connfiguration (see makepkg.conf)
 
 # Prompt
-NOCONFIRM=0
-UP_NOCONFIRM=0     # No prompt while build upgrades (including -Sbu)
-BUILD_NOCONFIRM=0  # Only prompt for editing files
-PU_NOCONFIRM=0     # Add --noconfirm to $PACMAN -U
-EDITFILES=0
+#NOCONFIRM=0
+#UP_NOCONFIRM=0     # No prompt while build upgrades (including -Sbu)
+#BUILD_NOCONFIRM=0  # Only prompt for editing files
+#PU_NOCONFIRM=0     # Add --noconfirm to $PACMAN -U
+#EDITFILES=1
 #NOENTER=1
 
 # Output
@@ -57,3 +56,8 @@ EDITFILES=0
 # Command
 #PACMAN="pacman"
 #DIFFEDITCMD="vimdiff"
+
+# pacdiffviewer
+#P_LOCATE=0         # Use locate instead of find
+#P_SEARCHDIR=(/etc/ /boot/)
+#P_SAVEDIR='/var/lib/yaourt/backupfiles'

@@ -1,16 +1,18 @@
 [Desktop Entry]
 Version=1.0
-Name=Chromium
+Name=Google Chrome
 GenericName=Web Browser
 GenericName[pt]=Navegador Web
 GenericName[pt_BR]=Navegador da Internet
 Comment=Access the Internet
 Comment[pt]=Aceder à Internet
 Comment[pt_BR]=Acessar a internet
-Exec=chromium %U
+Exec=/usr/bin/google-chrome-stable %U
 Terminal=false
-Icon=chromium
+Icon=google-chrome
 Type=Application
 Categories=GTK;Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
 X-XFCE-Source=file:///usr/share/applications/chromium.desktop
+Path=
+StartupNotify=false

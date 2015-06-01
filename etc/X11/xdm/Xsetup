@@ -1,9 +1,11 @@
 #!/bin/sh
 
+nvidia-settings -l
+
 # the root window should have this color
 xsetroot -solid "#000000" -cursor_name left_ptr
 
-display -backdrop -window root /etc/X11/xdm/treebg.png
+display -backdrop -window root /etc/X11/xdm/green.png
 
 /etc/X11/xdm/buttons &
 

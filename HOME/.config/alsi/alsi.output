@@ -21,8 +21,8 @@
 # GTK3_FONT_NAME  - ex: {GTK3_FONT_NAME  => '%sGTK3 font name:%s %s'},
 
 [
-    {HARDCODED => ' '},
-    {HARDCODED => ' '},
+#    {HARDCODED => ' '},
+    {HARDCODED => '~~~~~~~~~~~~~~~ ~~ ~  ~    ~'},
     {OS       => '%sOS:%s %s'},          # Operating system
     {HOSTNAME => '%sHostname:%s %s'},    # Hostname
     {UPTIME   => '%sUptime:%s %s'},      # Uptime
@@ -38,7 +38,9 @@
     {RAM        => '%sRAM:%s %s'},                # RAM usage
     {CPU        => '%sCPU:%s %s'},                # CPU name
     {PARTITIONS => undef},                        # Partitions goes here
-    {HARDCODED => "\e[1;37m\e[101m|*******************************|\e[0m"},
-    {HARDCODED => "\e[1;37m\e[101m| BE CAREFUL TO AVOID PROBLEMS! |\e[0m"},
-    {HARDCODED => "\e[1;37m\e[101m|*******************************|\e[0m"},
+#    {HARDCODED => "\e[1;37m\e[101m|*******************************|\e[0m"},
+#    {HARDCODED => "\e[1;37m\e[101m| BE CAREFUL TO AVOID PROBLEMS! |\e[0m"},
+#    {HARDCODED => "\e[1;37m\e[101m|*******************************|\e[0m"},
+    {HARDCODED => '~~~~~~~~~~~~~~~ ~~ ~  ~    ~'},
+
 ]

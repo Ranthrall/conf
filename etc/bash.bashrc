@@ -2,6 +2,10 @@
 # /etc/bash.bashrc
 #
 
+# Se conexão via SSH, executar o screen
+[ ! -z "$SSH_TTY" ] && [ -z "$STY" ] && exec screen -xRR ssh
+[ "$TERM" == "screen" ] && alias exit='screen -X detach' && return
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
