@@ -1,6 +1,7 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 06/2015 - AcidHub <acidhub@craft.net.br>
+"
 " => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ----------
 " Sets how many lines of history VIM has to remember
 set history=100
 
@@ -16,10 +17,8 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ---------------------
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
@@ -34,9 +33,6 @@ set ruler
 
 "Show Line Numbers
 set number
-
-" Height of the command bar
-"set cmdheight=2
 
 " A buffer becomes nohidden when it is abandoned
 set nohidden
@@ -69,20 +65,12 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-" No annoying sound on errors
-"set noerrorbells
-"set novisualbell
-"set t_vb=
-"set tm=500
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------
 " Enable syntax highlighting
 syntax enable
 
-" colorscheme wombat256mod
+colorscheme Mustang
 set background=dark
 set t_Co=256
 
@@ -94,7 +82,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-    colorscheme morning
+    colorscheme habilight
     set background=light
 endif
 
@@ -104,23 +92,19 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" --------------------------
+" Turn backup off
 set nobackup
 set nowb
 set noswapfile
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------
 " Use spaces instead of tabs
 set expandtab
 
-" Be smart when using tabs ;)
+" Try to be smart when using tabs
 set smarttab
 
 " 1 tab == 4 spaces
@@ -131,22 +115,13 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "NO Wrap lines
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " Close the current buffer
 map <leader>bd :Bclose<cr>
-
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -177,10 +152,8 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-
-""""""""""""""""""""""""""""""
 " => Status line
-""""""""""""""""""""""""""""""
+" --------------
 " Always show the status line
 set laststatus=2
 
@@ -188,10 +161,8 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ Path:\%r%{getcwd()}%h\ \ \ Linha:\%l\\%L\ -\ %p%% 
 "set statusline=%M%h%y\ %t\ %F\ %p%%\ %l/%L\ %=[%{&ff},%{&ft}]\ [a=\%03.3b]\ [h=\%02.2B]\ [%l,%v]
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -204,21 +175,20 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
+" Quickly open a window for take notes
+map <leader>q :split ~/notes<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+set pastetoggle=<F2>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
@@ -276,9 +246,8 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-""""""""""""""""""""""""""""""""""""
-" ===> Auto Save/Restore session
-""""""""""""""""""""""""""""""""""""
+" ==> Auto Save/Restore session
+" -----------------------------
 let g:screen_size_restore_pos = 1
 let g:screen_size_by_vim_instance = 0
 if has("gui_running")
@@ -340,27 +309,43 @@ if has("gui_running")
 endif
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Personal maps
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> Others maps
+" ---------------
+" Duplicate a line
 map  <C-d> :t.<cr>
 imap  <C-d> <Esc>:t.<cr><Insert>
+
+" Copy selected (visual mode)
 map  <C-c> "+y
+
+" Paste
 map  <C-v> "+gP
-imap  <C-v> <Esc>"+gP<Insert>
+imap  <C-v> <Esc><Right>"+gP<Insert>
+
+" Cut (visual mode)
 map  <C-x> "+x
+
+" Undo
 map  <C-z> u
 imap  <C-z> <Esc>u<Insert>
+
+" Select all
 map  <C-a> ggVG
 imap  <C-a> <Esc>ggVG<Insert>
+
+" Save
 map <C-s> :w!<cr>
 imap <C-s> <Esc>:w!<cr><Insert>
+
+" Close/quit
 map <C-q> :q<cr>
 imap <C-q> <Esc>:q<cr>
+
 
 map <C-t> :tabNext<cr>
 map <C-n> :tabnew<cr>
 
+" Move a line up/down with Alt+↑ or Alt+↓ (gvim only)
 nmap <M-Up> mz:m-2<cr>`z
 nmap <M-Down> mz:m+<cr>`z
 vmap <M-Up> :m'<-2<cr>`>my`<mzgv`yo`z
@@ -370,9 +355,8 @@ imap <M-Down> <Esc>mz:m+<cr>`z<Insert>
 
 set mouse=a
 
-""""""""""""""""""""""""""""""""""""
 " ==> "F" mappings (for now NERDTree/Taglist)
-""""""""""""""""""""""""""""""""""""
+" -------------------------------------------
 map <F1> :help<cr>
 
 map <F5> :NERDTree<cr>

@@ -1,4 +1,5 @@
-/dev/sdb2           	/         	ext4      	rw,relatime,data=ordered	0 1
-/dev/sdb1           	/boot     	ext2      	rw,relatime	0 2
-/dev/sda3               /home           ext4            rw        0 3
-
+# <file system>        <dir>         <type>    <options>                <dump> <pass>
+/dev/sdb2              /         	 ext4      rw,relatime,data=ordered	0      1
+/dev/sdb1              /boot     	 ext2      rw,relatime              0      2
+/dev/sda3              /home         ext4      rw                       0      2
+/swap                  none          swap      defaults                 0      0

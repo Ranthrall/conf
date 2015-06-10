@@ -1,3 +1,49 @@
+! 06/2015 - AcidHub <acidhub@craft.net.br>
+! xcalc
+xcalc*geometry:                        200x275
+xcalc.ti.bevel.background:             #111111
+xcalc.ti.bevel.screen.background:      #000000
+xcalc.ti.bevel.screen.DEG.background:  #000000
+xcalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background: #000000
+xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background:  #000000
+xcalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.INV.background:  #000000
+xcalc.ti.bevel.screen.INV.foreground:  Red
+xcalc.ti.bevel.screen.LCD.background:  #000000
+xcalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+xcalc.ti.bevel.screen.M.background:    #000000
+xcalc.ti.bevel.screen.M.foreground:    LightSeaGreen
+xcalc.ti.bevel.screen.P.background:    #000000
+xcalc.ti.bevel.screen.P.foreground:    Yellow
+xcalc.ti.Command.foreground:  White
+xcalc.ti.Command.background:  #777777
+xcalc.ti.button5.background:  Orange3
+xcalc.ti.button19.background: #611161
+xcalc.ti.button18.background: #611161
+xcalc.ti.button20.background: #611111
+! uncomment to change label on division button
+!xcalc.ti.button20.label:      /
+xcalc.ti.button25.background: #722222
+xcalc.ti.button30.background: #833333
+xcalc.ti.button35.background: #944444
+xcalc.ti.button40.background: #a55555
+xcalc.ti.button22.background: #222262
+xcalc.ti.button23.background: #222262
+xcalc.ti.button24.background: #222272
+xcalc.ti.button27.background: #333373
+xcalc.ti.button28.background: #333373
+xcalc.ti.button29.background: #333373
+xcalc.ti.button32.background: #444484
+xcalc.ti.button33.background: #444484
+xcalc.ti.button34.background: #444484
+xcalc.ti.button37.background: #555595
+xcalc.ti.button38.background: #555595
+xcalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
 !
 ! Default mapping for Delete
 !
@@ -79,18 +125,11 @@
 !
 ! Defaults for Acrobat Reader
 !
-AcroRead*XmScrollBar.baseTranslations: #augment \
-    Shift<Btn5Down>: PageDownOrRight(0) \n Shift<Btn4Down>: PageUpOrLeft(0) \n\
-    Ctrl<Btn5Down>: IncrementDownOrRight(0) IncrementDownOrRight(0) IncrementDownOrRight(0) \n\
-    Ctrl<Btn4Down>: IncrementUpOrLeft(0) IncrementUpOrLeft(0) IncrementUpOrLeft(0) \n\
-    <Btn5Down>: IncrementDownOrRight(0) \n <Btn4Down>: IncrementUpOrLeft(0) \n 
-
 *printCommand: lpr
 
 Mwm.interactivePlacement:	false
 
 Scrollbar.JumpCursor:	True
-
 
 Ghostview.pageMedia:  A4
 
@@ -134,7 +173,6 @@ XSysinfo*swap*bar.foreground:   hotpink1
 XSysinfo*.background:           gray50
 XSysinfo*.BarGauge.background:  white
 
-
 *basicLocale:	C
 *timeFormat:	C
 *numeric:	C
@@ -144,16 +182,4 @@ XSysinfo*.BarGauge.background:  white
 #ifdef COLOR
 *customization:	-color
 #endif
-
-! ===========================================================================
-!                               Motif
-! ===========================================================================
-
-!*XmText.translations: #override\n\
-!       <Key>osfDelete: delete-previous-character()\n\
-!       <Key>osfBackSpace: delete-next-character()\n
-!
-!*XmTextField.translations: #override\n\
-!       <Key>osfDelete: delete-next-character()\n\
-!       <Key>osfBackSpace: delete-previous-character()\n
 

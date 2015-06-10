@@ -47,7 +47,7 @@
       <property name="XF86Mail" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="XF86Calculator" type="string" value="xfce4-terminal --drop-down -e tmux256">
+      <property name="XF86Calculator" type="string" value="xfce4-terminal --drop-down -e tmux">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
     </property>

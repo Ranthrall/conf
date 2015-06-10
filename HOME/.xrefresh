@@ -1,0 +1,6 @@
+#!/bin/bash
+# 06/2015 - AcidHub <acidhub@craft.net.br>
+xrandr --output HDMI-0 --mode 1920x1080
+sleep 2
+xrefresh
+exit 0

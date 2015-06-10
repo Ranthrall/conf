@@ -1,33 +1,32 @@
 #
 # ~/.bashrc
-#
+# 06/2015 - AcidHub <acidhub@craft.net.br>
 
 # Check if interactive
 [ -z "$PS1" ] && return
 
-# Ativar completações do bash
+# Enable bash completions
 source /usr/share/bash-completion/bash_completion
 
-# Ativar o gancho "command-not-found" do pkgfile
+# Activate the hook "command-not-found" from pkgfile
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-#cowsay
+# Cowsay :)
 #command fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 
-#alsi
+# alsi
 alsi -ub -f
 
-# Definir VIM como editor padrão
+# vim as default editor
 export EDITOR=/usr/bin/vim
 
 # XDG
 export XDG_CONFIG_HOME="$HOME"/.config
 
 # Aliases
-## by LaraCraft304 ##
-alias geany='geany_checkpath'
+#alias geany='geany_checkpath'
 alias gvim='gvim_checkpath'
-## Modified commands ## {{{
+## Modified commands ##
 alias diff='colordiff'              # requires colordiff package
 alias grep='grep --color=auto'
 alias more='less'
@@ -37,9 +36,9 @@ alias mkdir='mkdir -p -v'
 alias nano='nano -w'
 alias ping='ping -c 5'
 alias dmesg='dmesg -HL'
-# }}}
+#
 
-## New commands ## {{{
+## New commands ##
 alias da='date "+%A, %B %d, %Y [%T]"'
 alias du1='du --max-depth=1'
 alias hist='history | grep'         # requires an argument
@@ -47,7 +46,7 @@ alias openports='ss --all --numeric --processes --ipv4 --ipv6'
 alias pgg='ps -Af | grep'           # requires an argument
 alias ..='cd ..'
 alias reload='source /etc/bash.bashrc'
-# }}}
+#
 
 # Privileged access
 if [ `id -u` -ne 0 ]; then
@@ -56,7 +55,7 @@ if [ `id -u` -ne 0 ]; then
     alias poweroff='sudo systemctl poweroff'
 fi
 
-## ls ## {{{
+## ls ##
 alias ls='ls -hFBX --color=auto --group-directories-first'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
@@ -65,9 +64,9 @@ alias lx='ll -BX'                   # sort by extension
 alias lz='ll -rS'                   # sort by size
 alias lt='ll -rt'                   # sort by date
 alias lm='la | more'
-# }}}
+#
 
-## Safety features ## {{{
+## Safety features ##
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'                    # 'rm -i' prompts for every file
@@ -78,20 +77,20 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 alias cls=" echo -ne \"\033c\""       # clear screen for real (it does not work in Terminology)
-# }}}
+#
 
-## Yaourt aliases ## {{{
+## Yaourt aliases ##
 alias yau="yaourt -S"						# default action	- install one or more packages
 alias yauu="yaourt -Syu"					# '[u]pdate'		- upgrade all packages to their newest version
 alias yaur="yaourt -Rcns"					# '[r]emove'		- uninstall one or more packages
 alias yaus="yaourt -Ss"						# '[s]earch'		- search for a package using one or more keywords
 alias yaui="yaourt -Si"						# '[i]nfo'		- show information about a package
 alias yaulo="yaourt -Qqdt"					# '[l]ist [o]rphans'	- list all packages which are orphaned
+alias yaulo="yaourt -Rcns $(yaourt -Qqdt)"	# '[r]remove [o]rphans'	- remove all packages which are orphaned
 alias yauc="yaourt -Scc"					# '[c]lean cache'	- delete all not currently installed package files
 alias yaulf="yaourt -Ql"					# '[l]ist [f]iles'	- list all files installed by a given package
 alias yauexpl="yaourt -D --asexp"			# 'mark as [expl]icit'	- mark one or more packages as explicitly installed 
 alias yauimpl="yaourt -D --asdep"			# 'mark as [impl]icit'	- mark one or more packages as non explicitly installed
-alias yauro="yaourt -Orphans"
 
 extract() {
     local c e i

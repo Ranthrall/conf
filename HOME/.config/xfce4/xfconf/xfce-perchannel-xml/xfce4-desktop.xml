@@ -75,8 +75,8 @@
             <value type="uint" value="0"/>
             <value type="uint" value="65535"/>
           </property>
-          <property name="image-style" type="int" value="4"/>
-          <property name="last-image" type="string" value="/home/blackice/Imagens/chemical changes.jpg"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/blackice/Imagens/Wallpapers/Abstract-Light-600x1024.png"/>
         </property>
       </property>
       <property name="monitorDVI-D-0" type="empty">
@@ -108,13 +108,16 @@
     </property>
   </property>
   <property name="desktop-icons" type="empty">
-    <property name="icon-size" type="uint" value="56"/>
+    <property name="icon-size" type="uint" value="42"/>
     <property name="file-icons" type="empty">
       <property name="show-trash" type="bool" value="true"/>
     </property>
     <property name="show-thumbnails" type="bool" value="true"/>
     <property name="use-custom-font-size" type="bool" value="false"/>
     <property name="style" type="int" value="2"/>
+    <property name="show-tooltips" type="bool" value="true"/>
+    <property name="tooltip-size" type="double" value="54.000000"/>
+    <property name="show-hidden-files" type="bool" value="false"/>
   </property>
   <property name="desktop-menu" type="empty">
     <property name="show" type="bool" value="false"/>

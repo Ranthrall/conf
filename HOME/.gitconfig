@@ -1,0 +1,12 @@
+[user]
+	email = acidhub@craft.net.br
+	name = Fernando Manfredi
+[color]
+    branch = always
+    diff = always
+    grep = always
+    interactive = always
+    status = always
+	ui = true
+[core]
+	editor = vim
