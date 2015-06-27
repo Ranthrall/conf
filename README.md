@@ -1,8 +1,8 @@
-# BlackXT personal stuff
-Fernando Manfredi <acidhub@craft.net.br>
+# BlackXT personal stuff   
+Fernando Manfredi <contact@acidhub.click>
  
 ## Check my (and from my gf Lara) others stuffs
-> [Playing with RaspberryPi](https://github.com/RaspberryLove/)
-> [LaraCraft93](https://github.com/LaraCraft93)
-> [Homepage](http://www.craft.net.br/)
-> [Downloads by Lara](http://lara.craft.net.br/)
+> [Playing with RaspberryPi](https://github.com/RaspberryLove/)   
+> [ShyPixie](https://github.com/ShyPixie)   
+> [Homepage](http://acidhub.click/)   
+> [by Lara](http://lara.click/)   
