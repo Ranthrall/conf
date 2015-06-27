@@ -37,7 +37,6 @@ function traceroute; grc -es --colour=auto traceroute $argv; end
 function gvim; gvim_checkpath $argv; end
 #function geany; geany_checkpath $argv; end
 #
-function diff; vimdiff $argv; end
 function grep; /usr/bin/grep --color=auto $argv; end
 function more; less $argv; end
 function df; /usr/bin/df -h $argv; end
