@@ -1,6 +1,6 @@
 #
 # ~/.bashrc
-# 06/2015 - AcidHub <acidhub@craft.net.br>
+# 06/2015 - AcidHub <contact@acidhub.click>
 
 # Check if interactive
 [ -z "$PS1" ] && return
@@ -201,5 +201,5 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-PS1="\n[\u@\h:\w]\$ "
-# export TERM=screen-256color
+PS1="\n$Color_Off[\u@\h:\w]\$ "
+export TERM=screen-256color

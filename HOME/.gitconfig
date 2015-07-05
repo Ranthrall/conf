@@ -10,3 +10,5 @@
 	ui = true
 [core]
 	editor = vim
+[commit]
+	template = /home/acidhub/.gitcommit
