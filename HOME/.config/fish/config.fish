@@ -1,11 +1,3 @@
-# Cores padrões
-set fish_color_normal white
-set fish_color_command green
-set fish_color_redirection blue
-set fish_color_end yellow -o
-set fish_color_error red -o
-set fish_color_match blue -o
-
 # XDG
 set -x XDG_CONFIG_HOME "$HOME"/.config
 
@@ -113,20 +105,32 @@ end
 #PROMPT
 function fish_prompt -d "Write out the prompt"
     set laststatus $status
+    function _git_branch_name
+        echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+    end
+    function _is_git_dirty
+        echo (git status -s --ignore-submodules=dirty ^/dev/null)
+    end
+    if [ (_git_branch_name) ]
+        set -l git_branch (_git_branch_name)
+        set git_info "("(set_color -o green)"$git_branch"(set_color normal)")"
+        if [ (_is_git_dirty) ]
+            set -l dirty (set_color -o red)'✗'
+            set git_info "$git_info$dirty"
+        end
+    end
     set_color -b black
-    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s'\
+    printf '%s%s%s%s%s%s%s%s%s%s%s%s%s'\
     (set_color -o white)               \
     '❰'                                \
     (set_color green)                  \
     $USER                              \
     (set_color white)                  \
-    '@'                                \
-    (set_color blue)                   \
-    (hostname)                         \
-    (set_color white)                  \
     '❙'                                \
     (set_color yellow)                 \
     (echo $PWD | sed -e "s|^$HOME|~|") \
+    (set_color white)                  \
+    $git_info                          \
     (set_color white)                  \
     '❱'                                \
     (set_color white)
