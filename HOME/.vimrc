@@ -320,7 +320,7 @@ map  <C-c> "+y
 
 " Paste
 map  <C-v> "+gP
-imap  <C-v> <Esc><Right>"+gP<Insert>
+imap  <C-v> <Esc>"+gP<Insert>
 
 " Cut (visual mode)
 map  <C-x> "+x
