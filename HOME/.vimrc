@@ -70,9 +70,8 @@ set mat=2
 " Enable syntax highlighting
 syntax enable
 
-colorscheme Mustang
+" colorscheme desert
 set background=dark
-set t_Co=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -82,7 +81,7 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-    colorscheme habilight
+"    colorscheme habilight
     set background=light
 endif
 
@@ -359,8 +358,8 @@ set mouse=a
 " -------------------------------------------
 map <F1> :help<cr>
 
-map <F5> :NERDTree<cr>
-map <F6> :NERDTreeClose<cr>
-map <F7> :TlistOpen<cr>
-map <F8> :TlistClose<cr>
+" map <F5> :NERDTree<cr>
+" map <F6> :NERDTreeClose<cr>
+" map <F7> :TlistOpen<cr>
+" map <F8> :TlistClose<cr>
 

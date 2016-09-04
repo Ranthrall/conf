@@ -1,8 +1,11 @@
 # XDG
 set -x XDG_CONFIG_HOME "$HOME"/.config
 
-#COLORS!!!!
+# COLORS!!!!
 #set -x TERM screen-256color
+
+# Dammit pinentry!
+set -x GPG_TTY (tty)
 
 function fish_greeting -d "motd"
 	if test -z "$SSH_TTY"

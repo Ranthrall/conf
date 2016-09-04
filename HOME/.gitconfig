@@ -1,10 +1,10 @@
 [user]
 	email = contact@acidhub.click
 	name = Fernando Manfredi
-	signingkey = 9368E294
+    signingkey = 9368E294
 [commit]
 	gpgsign = true
-    template = /home/Fernando/.gitcommit
+    template = ~/.gitcommit
 [color]
     branch = always
     diff = always
